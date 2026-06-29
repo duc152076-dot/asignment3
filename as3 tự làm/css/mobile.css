@@ -1,0 +1,56 @@
+/* Khi màn hình nhỏ dưới 768px */
+@media screen and (max-width: 767px) {
+    .banner-wrapper {
+        height: 200px;
+    }
+
+    /* Menu xếp dọc */
+    nav {
+        flex-direction: column;
+        width: 95%;
+        margin-top: -20px;
+        gap: 10px;
+    }
+    
+    .nav-name {
+        border: none;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    /* Mục tiêu & Thông tin cá nhân: Xếp thành 1 cột */
+    .top-info {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    /* Lý lịch: Xếp thành 1 cột dọc */
+    .grid-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Chứng chỉ: Xếp thành 100% chiều dọc */
+    .cert {
+        grid-template-columns: 1fr;
+    }
+    
+    .cert-item-even {
+        padding-left: 0;
+    }
+    
+    .cert-item-even::before {
+        display: none;
+    }
+
+    /* Dự án: Xếp thành 1 cột dọc trọn màn hình */
+    .projects-grid {
+        flex-direction: column;
+    }
+    
+    .project-card {
+        width: 100%;
+    }
+}

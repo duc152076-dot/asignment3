@@ -1,0 +1,203 @@
+    /* --- THIẾT LẬP CƠ BẢN --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    padding: 30px;
+}
+
+/* --- ĐỊNH DẠNG TEXT CHỦ ĐẠO --- */
+.text-blue {
+    color: #0020ff; /* Màu xanh đậm đặc trưng của mẫu */
+}
+
+/* --- CHIA LƯỚI TỔNG BẰNG CSS GRID --- */
+/* .charter-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr; 
+    grid-template-rows: auto auto; 
+    gap: 15px; 
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #0020ff; 
+    padding: 15px; 
+} */
+.charter-container{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 15px;
+    margin: 0 auto;
+    max-width:auto;
+    background-color: #0020ff; 
+    padding: 15px;
+}
+.timeline-box{
+    grid-row : span 2;
+}
+
+/* --- ĐỊNH DẠNG CHUNG CHO CÁC KHỐI HỘP --- */
+.box {
+    background-color: #f7fafc; /* Màu nền xám trắng nhẹ bên trong các hộp */
+    padding: 20px;
+}
+
+.box-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+
+
+/* --- ĐỊNH DẠNG CẤU TRÚC ITEMS BÊN TRONG CÁC KHỐI (Flexbox cơ bản) --- */
+.item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.icon {
+    font-size: 20px;
+    color: #333;
+    margin-top: 3px;
+    width: 25px;
+    text-align: center;
+}
+
+.item-text h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.item-text p {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* --- ĐỊNH DẠNG RIÊNG CHO KHỐI SCOPES (Chia 2 cột IN / OUT) --- */
+.scopes-split {
+    display: flex;
+    gap: 30px;
+}
+
+.scope-col {
+    flex: 1;
+}
+
+.scope-col h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.scope-col p {
+    font-size: 12px;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+/* 
+time line */
+.time-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #ddd;
+}
+
+.time-item:last-child {
+    border-bottom: none;
+}
+
+.circle-num {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    background-color: #8b96ff; 
+    color: white;
+    text-align: center;
+    border-radius: 60%;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.time-text h3 {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.time-text p {
+    font-size: 12px;
+    color: #666;
+}
+
+/* responsive trên điện thoại */
+@media screen and (max-width: 991px) {
+    .charter-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;                  
+        padding: 15px;              
+        width: 90%;                 
+        margin: 20px auto;          
+
+    }
+    .goals-box { order: 1; }
+    .scopes-box { order: 2; }
+    .team-box { order: 3; }
+    .primary-box { order: 4; }
+    .timeline-box { 
+        order: 5;        
+        grid-row: auto;  
+    }
+
+    .goals-box, .scopes-box, .team-box, .primary-box, .timeline-box {
+        display: flex;
+        flex-direction: column; 
+        gap: 15px;              
+    }
+
+
+    .scopes-split {
+        display: flex;
+        flex-direction: column; 
+        gap: 20px; 
+    }
+    .goals-box .item {
+        display: flex;
+        flex-direction: row; 
+        align-items: flex-start;
+    }
+
+    .team-box .item, 
+    .primary-box .item {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;    
+        text-align: center;     
+    }
+    .time-item{
+        flex-direction: column;
+        align-items: start;
+    }
+    .item{
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+}

@@ -1,0 +1,34 @@
+/* Khi màn hình nhỏ hơn 1024px và lớn hơn 768px */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    nav {
+        width: 95%;
+    }
+
+    /* Lý lịch: Bẻ từ 3 cột về 2 cột bằng Grid quen thuộc */
+    .grid-layout {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    /* Chứng chỉ: Xếp dọc thành 1 cột, ẩn vạch kẻ giữa */
+    .cert {
+        grid-template-columns: 1fr;
+    }
+    
+    .cert-item-even {
+        padding-left: 0;
+    }
+    
+    .cert-item-even::before {
+        display: none;
+    }
+
+    /* Dự án: Xếp dọc thành 1 cột */
+    .projects-grid {
+        flex-direction: column;
+    }
+    
+    .project-card {
+        width: 100%;
+    }
+}

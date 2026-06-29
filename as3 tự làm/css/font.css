@@ -1,0 +1,12 @@
+/* Thiết lập chữ và cuộn trang cơ bản */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f6f8; 
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
