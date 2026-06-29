@@ -1,11 +1,11 @@
-/* --- Khung bọc chính --- */
+
 .custom-container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px 50px 20px;
 }
 
-/* --- Banner đầu trang --- */
+
 .banner-wrapper {
     position: relative;
     width: 100%;
@@ -27,7 +27,7 @@
     color: white;
 }
 
-/* --- Thanh Menu (Dùng Flexbox cơ bản) --- */
+
 nav {
     display: flex;
     justify-content: center;
@@ -56,10 +56,10 @@ nav {
     border-right: 1px solid #eee;
 }
 
-/* --- Khu vực Thông tin Top (Chia 2 cột bằng Grid) --- */
+
 .top-info {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Chia đôi thành 2 cột bằng nhau */
+    grid-template-columns: 1fr 1fr; 
     gap: 40px;
     margin-bottom: 50px;
 }
@@ -81,12 +81,12 @@ nav {
 .personal-list span {
     font-weight: bold;
     display: inline-block;
-    width: 100px; /* Cố định độ rộng tiêu đề để thẳng hàng */
+    width: 100px; 
 }
 
 .grid-layout {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Chia làm 3 cột đều nhau */
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
     margin-bottom: 50px;
 }
@@ -122,7 +122,7 @@ nav {
     top: 6px;
 }
 
-/* Thanh đo Kỹ năng */
+
 .skill-levels {
     display: flex;
     gap: 8px;
@@ -140,7 +140,7 @@ nav {
     background-color: #007bff;
 }
 
-/* Ô Sở thích */
+
 .hobbies {
     display: flex;
     justify-content: space-between;
@@ -158,7 +158,7 @@ nav {
     color: #007bff;
 }
 
-/* --- Khối Chứng chỉ (Chia 2 cột bằng Grid) --- */
+
 .cert-section {
     margin-bottom: 50px;
 }
@@ -184,7 +184,7 @@ nav {
     width: 40%;
 }
 
-/* Vạch kẻ dọc trang trí giữa 2 cột chứng chỉ */
+
 .cert-item-even {
     position: relative;
     padding-left: 30px;
@@ -200,7 +200,7 @@ nav {
     background-color: #d6c08d;
 }
 
-/* --- Khối Dự án (Dùng Flexbox hàng ngang) --- */
+
 .projects-grid {
     display: flex;
     justify-content: space-between;
@@ -213,7 +213,7 @@ nav {
     border: 1px solid #eaeaea;
     border-radius: 8px;
     overflow: hidden;
-    width: 32%; /* Mỗi card chiếm gần 1/3 chiều rộng */
+    width: 32%; 
 }
 
 .project-card img {
@@ -262,9 +262,9 @@ nav {
     margin-right: 5px;
 }
 
-/* --- NÚT BẤM VIEW MORE TRONG JAVASCRIPT --- */
+
 .view-btn {
-    display: none; /* Mặc định ẩn đi */
+    display: none;
     margin: 15px auto 0;
     padding: 6px 15px;
     border: 1px solid #ddd;
@@ -273,11 +273,11 @@ nav {
 }
 
 .card:hover .view-btn {
-    display: block; /* Di chuột vào thẻ thì hiện nút */
+    display: block;
 }
 
 .hide {
-    display: none !important; /* Lệnh ẩn nội dung lập tức */
+    display: none !important;
 }
 .project-link {
     
